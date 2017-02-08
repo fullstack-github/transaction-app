@@ -1,0 +1,45 @@
+<div class="breadcrumbs" id="breadcrumbs">
+    <ul class="breadcrumb">
+        <!-- <li>
+            <i class="ace-icon fa fa-home home-icon"></i>
+            <a href="#">Home</a>
+        </li> -->
+        <li class="active"></li>
+    </ul>
+    <div style="float: right; margin-top: -27px; margin-right: 10px;"><a ng-click="navigateToTransaction();" style="margin-right:15px;">Make Transaction</a> <a ng-click="addAccount();">Add Account</a></div>
+</div>
+<div class="page-content">
+    <div class="row">
+        <div class="space-6"></div>
+        <div class="col-sm-12 col-sm-offset-0">
+            <div id="login-box" class="login-box visible widget-box no-border">
+                <div class="widget-body">
+                    <div class="widget-main">
+                        <h4 class="header blue lighter bigger">
+                        <i class="icon-coffee green"></i>
+                        Account List
+                        </h4>
+                        <table border="1" cellpadding="0" width="100%" class="transaction">
+                            <tr>
+                                <th>Name</th>
+                                <th>Email</th>
+                                <th>Balance</th>
+                                <th>Action</th>
+                            </tr>
+                            <tr ng-repeat="account in accountList">
+                                <td>{{account.name}}</td>
+                                <td>{{account.email}}</td>
+                                <td>{{account.balance}}</td>
+                                <td align="center" style="padding:5px;"><button type="submit" class="width-35 btn btn-sm btn-primary" ng-click="viewTransaction(account.id)">
+                                        View Transaction
+                                    </button></td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+    </div>
+</div>
+<!-- /.page-content -->
